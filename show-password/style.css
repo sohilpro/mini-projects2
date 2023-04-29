@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #d8efff;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.content {
+  height: 50px;
+  width: 280px;
+  display: flex;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+.lock {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #48b3fb;
+  color: #fff;
+  line-height: 48px;
+  font-size: 20px;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid #48b3fb;
+}
+input {
+  background: #f9fdff;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #48b3fb;
+  padding-left: 60px;
+  outline: none;
+  color: #48b3fb;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+}
+input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 4px #48b3fb69;
+}
+.show-hide {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.show-hide i {
+  font-size: 19px;
+  color: #48b3fb;
+  cursor: pointer;
+  transform: translateX(200%);
+  transition: transform 0.3s ease-in-out;
+}
+.show-hide i.hide::before {
+  content: '\f070';
+}
+input:valid ~ .show-hide i {
+  transform: translateX(0);
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .content {
+    transform: scale(0.8);
+  }
+}
