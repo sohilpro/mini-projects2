@@ -1,0 +1,83 @@
+/* T3DTL needs some CSS to work */
+@import url("https://cdn.skypack.dev/that-3d-text-library/lib/styles.css");
+
+/* A nice font for the headings. T3DTL works better with chunkier fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+/* A little setup to have the text center of the page */
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: calc(100% - 2em);
+  height: calc(100% - 2em);
+  padding: 1em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4f9f2;
+  perspective: 700px;
+}
+
+/* Apply the font to all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lilita One", cursive;
+  font-weight: 400;
+  font-size: 8em;
+}
+
+/* Hide the text while T3DTL sets things up */
+[data-3d-text] {
+  opacity: 0;
+}
+
+[data-text-ready] {
+  opacity: 1;
+}
+
+/* DEMO SPECIFIC CSS */
+
+a {
+  --duration: 0.6s;
+  --ease: cubic-bezier(0.75, 0, 0.31, 1);
+
+  perspective: 400px;
+}
+
+a h1 {
+  --color-front: #705189;
+  --depth: 1;
+  --layers: 10;
+
+  color: #4422aa;
+  transition: transform var(--duration) var(--ease);
+}
+
+a:hover h1 {
+  --duration: 0.35s;
+  --depth: 40;
+  --color-front: #bb66ff;
+  transform: rotateX(30deg) rotateY(10deg) translateZ(-0.1em);
+}
+
+a:active h1 {
+  --depth: 20;
+  --duration: 0.15s;
+  
+  transform: rotateX(30deg) rotateY(10deg) translateZ(-0.17em);
+}
+
+.that-3d-letter {
+  transition: transform var(--duration) var(--ease);
+  transition-property: transform, color;
+}
