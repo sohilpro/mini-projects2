@@ -1,0 +1,49 @@
+body{
+   margin: 0;
+  padding: 0;
+}
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #161616;
+}
+.App h1{
+ color: white;
+ border-bottom: 2px solid #DC5B51;
+ padding: 20px;
+}
+.loader{
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+.skeleton {
+  width: 180px;
+  height: 65px;
+  padding: 25px;
+  border-radius: 15px;
+  background: linear-gradient(-45deg, #7a7575, #282828);
+  background-size: 400% 400%;
+  animation: gradient 2s ease-in-out infinite;
+
+}
+
+
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

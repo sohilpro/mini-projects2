@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(to top right , #09203F , #537895);
+    font-family: cursive;
+}
+.parent-box{
+    width: 800px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.box{
+    width: 300px;
+    height: 80px;
+    background-color: #434040;
+    padding: 2px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px 1px #434040;
+}
+.right-box , .left-box {
+    width: 150px;
+    height: 75px;
+    background-color: #434040;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+    font-size: 40px;
+}
+.left-box{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    left:px;
+}
+.right-box{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    right: 248px;
+    text-align: start;;
+}
+.box-text{
+    color: antiquewhite;
+    text-shadow: 0px 2px 5px antiquewhite;
+    margin-bottom: 12px;
+}
+.socials{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:80px;
+}
+.icon{
+    font-size: 35px;
+    color: aliceblue;
+    cursor: pointer;
+    padding: 12px;
+    background-color: #434040;
+    border-radius: 50%;
+    transition: 0.3s;
+    position: relative;
+}
+.text{
+    display: block;
+    width: 50px;
+}
+.icon:hover{
+    font-size: 55px;
+    transform: translateY(-35px);
+}
+.youtube:hover{
+    color: rgb(228, 47, 47);
+}
+.twitter:hover{
+    color: rgb(82, 82, 230);
+}
+.twitch:hover{
+    color: blueviolet;
+}
+.discord:hover{
+    color: rgb(84, 84, 222);
+}
+.box:hover .right-box {
+    font-size: 0px;
+    width: 0px;
+}
+.box:hover .left-box {
+    font-size: 0px;
+    width: 0px;
+}
