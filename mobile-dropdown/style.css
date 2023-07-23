@@ -1,0 +1,80 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.stack.stacked {
+  padding-bottom: 8px;
+}
+.stack.stacked .item:not(:first-child) {
+  height: 60%;
+}
+.stack.stacked .item:not(:first-child) {
+  position: absolute;
+  width: 96%;
+  bottom: 4px;
+  box-shadow: none;
+}
+.stack.stacked .item:nth-child(2) {
+  z-index: 1;
+  width: 98%;
+  bottom: 4px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+.stack.stacked .item:nth-child(3) {
+  bottom: 0;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.item:first-child {
+  z-index: 2;
+  /* keep the first item on top of the stack */
+}
+
+/* style for embellishment only */
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 25vh;
+  background: #e2e8f0;
+}
+
+section {
+  padding: 3rem;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: -3px -3px 15px rgba(255, 255, 255, 0.7), 4px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stack {
+  width: 250px;
+}
+
+.item {
+  height: 50px;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.item:nth-child(1) {
+  cursor: pointer;
+  height: 60px;
+  background: #6ee7b7;
+}
+
+.item:nth-child(2) {
+  background: #fdba74;
+}
+
+.item:nth-child(3) {
+  background: #7dd3fc;
+  height: 70px;
+}
+
+.item:nth-child(4) {
+  background: #fef08a;
+  height: 40px;
+}
