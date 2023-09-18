@@ -1,0 +1,58 @@
+*{
+  padding : 0;
+  margin : 0;
+}
+.App {
+  background-color: #161616;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+select,.custom-file-upload{
+  width: 200px;
+  padding: 10px 20px;
+  background-color: #A82C2C;
+  border-radius: 10px;
+  padding-left: 2%;
+  border: 0;
+  color: white;
+}
+
+select:focus{
+  outline: none;
+}
+
+.field{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.field label{
+  margin: auto 0;
+}
+
+input[type="file"]{
+  display: none;
+}
+
+button{
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  border-left: 2px solid #A82C2C;
+  cursor: pointer;
+}
